@@ -1,0 +1,49 @@
+{
+    "breadcrumbs.enabled": true,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.6,
+    "editor.fontFamily": "'Meslo','Droid Sans Mono', monospace",
+    "editor.renderLineHighlightOnlyWhenFocus": false,
+    "explorer.confirmDelete": true,
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        ".idea": true,
+        "**/__pycache__/": true,
+        "**/.git": false,
+        "**/.svelte-kit": true,
+        "**/node_modules": true,
+        "**/.vscode": false,
+        "**/.ipynb_checkpoints/": true,
+        "**/.pytest_cache/": true,
+    },
+    "terminal.integrated.lineHeight": 1,
+    "terminal.integrated.fontSize": 12,
+    "window.zoomLevel": 2,
+
+    "workbench.editor.tabSizingFixedMaxWidth": 160,
+    "workbench.editor.labelFormat": "short",
+    "workbench.colorTheme": "GitHub Light Colorblind (Beta)",
+    "workbench.iconTheme": "ayu",
+
+    "notebook.output.lineHeight": 1.1,
+    "notebook.output.fontSize": 14,
+    "notebook.output.fontFamily": "Roboto Mono, \"DroidSansM Nerd Font Mono\", Noto Sans Mono, Inconsolata",
+    "notebook.markdown.lineHeight": 24,
+    "notebook.markup.fontSize": 16,
+    "notebook.output.textLineLimit": 60,
+    "notebook.showFoldingControls": "always",
+    "notebook.lineNumbers": "on",
+    "jupyter.askForKernelRestart": false
+}
