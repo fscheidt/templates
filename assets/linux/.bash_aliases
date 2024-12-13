@@ -1,0 +1,21 @@
+#!/bin/bash
+alias lsl='ls -ahgo'
+alias lst="tree -a -L 3 --dirsfirst --prune -I '.git'"
+alias lsdir="ls -lhagoa --color=always | grep '^d'"
+alias cdbin='cd ~/bin && ls -lhgoa'
+alias cdesk='cd ~/Desktop && ls -lhgoa'
+alias cdrop='cd ~/Dropbox && ls -lhgoa'
+alias cdmarket='cd ~/Projects/deepmk && poetry shell'
+alias cdprojects='cd ~/Projects && ls -lhgoa'
+alias cdown='cd ~/Downloads && ls -lhgoa'
+alias cdrepos='cd ~/Repos && ls -lhgoa'
+alias cdsw='cd ~/Softwares && ls -lhgoa'
+alias cdtemp='cd ~/Temp && ls -lhgoa'
+alias cdwork='cd ~/Workspaces && ls -lhgoa'
+alias cdxc='cd ~/Projects/fdo'
+alias cdxcdata='cd ~/.config/fdo/data'
+alias hist_clear='history -c && rm ~/.bash_history'
+alias hist_unset='unset HISTFILE && export LESSHISTFILE="-"'
+# alias ..='cd ..'
+# alias ~='cd ~'
+alias x_hashall='find . -type f -print0 | xargs -0 sha256sum'

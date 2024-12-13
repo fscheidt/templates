@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Tilix2X
+Comment=Tilix 2panels
+Icon=/home/scheidt/bin/icons/tilix2x.svg
+Exec=/usr/bin/tilix --session /home/scheidt/bin/config/2panes.json
+Terminal=false
+Categories=System

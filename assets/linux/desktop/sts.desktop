@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.1
+Name=Spring Tool Suite 4
+Comment=Spring Tool Suite
+Exec=/home/scheidt/Softwares/sts/SpringToolSuite4 %u
+Type=Application
+MimeType=x-scheme-handler/eclipse+command;x-scheme-handler/eclipse+mpc;
+Icon=/home/scheidt/Softwares/sts/icon.xpm
+Terminal=false
+Categories=Utility;Development;IDE;
+StartupWMClass=SpringToolSuite4

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.1
+Name=Eclipse
+Comment=Eclipse Java Web
+Exec=/home/scheidt/Softwares/eclipse/eclipse %u
+Type=Application
+MimeType=x-scheme-handler/eclipse+command;x-scheme-handler/eclipse+mpc;
+Icon=/home/scheidt/Softwares/eclipse/icon.xpm
+Terminal=false
+Categories=Utility;Development;IDE;
+StartupWMClass=Eclipse

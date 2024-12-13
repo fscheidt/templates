@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Tilix6p
+Comment=Tilix 6panes
+Icon=/home/scheidt/bin/icons/tilix4x.svg
+Exec=/usr/bin/tilix --session /home/scheidt/bin/config/tilix6p.json
+Terminal=false
+Categories=System
+
