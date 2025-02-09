@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+STEP=$(tput setaf 5) # magenta
+S=$(tput sgr0)
+DONE=$(tput setaf 190) # lime
+WARN=$(tput setaf 215) # yellow
+
+# =============================
+PACKAGE_NAME="ava"
+DIST_DIR="dist"
+# =============================
+
+set -e
+error_exit() {
+    echo "Error: $1" >&2
+    exit 1
+}
+
+if [ -z "$PACKAGE_NAME" ]; then
+    error_exit "PACKAGE_NAME is not defined. Please set it to your package name."
+fi
+
+if [ -n "$VIRTUAL_ENV" ] && [[ "$VIRTUAL_ENV" == *"poetry"* ]]; then
+    echo "Poetry shell is activated!"
+    echo "${WARN}Deactivate poetry shell first to run this script.${S}"
+    exit 1
+fi
+
+echo "${STEP}[1] Uninstalling any previously version of $PACKAGE_NAME...${S}"
+if pip show "$PACKAGE_NAME" &>/dev/null; then
+    printf "%s\n" "========================================"
+    printf "%s\n" "pip uninstall -y $PACKAGE_NAME"
+    printf "%s\n" "========================================"
+    pip uninstall -y "$PACKAGE_NAME" || error_exit "Failed to uninstall $PACKAGE_NAME."
+    echo "Successfully uninstalled $PACKAGE_NAME."
+else
+    echo "No existing installation of $PACKAGE_NAME found."
+fi
+
+echo -e "\n${STEP}[2] Removing any previous builds from $DIST_DIR... ${S}"
+if [ -d "$DIST_DIR" ]; then
+    printf "%s\n" "========================================"
+    printf "%s\n" "rm -rf $DIST_DIR"
+    printf "%s\n\n" "========================================"
+    rm -rf "$DIST_DIR" || error_exit "Failed to remove previous builds from $DIST_DIR."
+    echo "Previous builds removed successfully."
+else
+    echo "No $DIST_DIR directory found; skipping clean-up."
+fi
+
+echo "${DONE}Uninstall done.${S}"
